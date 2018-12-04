@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing side</title>
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="whole">
+
+            <div id="timer"></div>
+            <div id="points"></div>
+
+            <div class="prompts">
+            </div>
+
+            <div class="forActing">
+                <img class="image" src="image/action.jpg" alt="action">
+            </div>
+
+            <div class="bigbox">
+                <!-- set a Words Bar for words pop up randomly -->
+                <p id="correctAnswers" class="dataBarforGuessing"><input type="" name="words" value="The words you got right!" /></p>
+                <!-- set a Result Bar for the result that user said out  -->
+                <input class="guessBar" type="" name="results" value="The words comes out from players who are guessing..." />
+                <ul class="button">
+                    <li><button class="bu2" id="myBu2">pass</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <video id="myVideo" width="100%" height="40%" preload autoplay loop muted></video>
+    <!-- set a few boxs for every single words, the number of box depends on the number of words-->
+
+
+    <script>
+        //counting down...
+        var timeLeft = 180;
+        var timer = document.getElementById('timer');
+        var timerId = setInterval(function () {
+            countdown();
+        }, 1000);
+
+        function countdown() {
+            if (timeLeft == 0) {
+                changeThemePrompt();
+                changeToNextTheme();
+                timeLeft = 180;
+            } else {
+                timer.innerHTML = timeLeft + ' seconds remaining';
+                timeLeft--;
+            }
+        }
+
+        //click button to trigger next words
+        function changeToNextwords() {
+            var myarray = fourThemes.actOne;
+            var random = myarray[Math.floor(Math.random() * myarray.length)];
+            //alert(random);
+            document.getElementById("newWords").innerHTML = random;
+        }
+
+        function changeThemePrompt() {
+            alert("change to next theme!");
+        }
+
+        function changeToNextTheme() {
+            Array.prototype.splice.apply(fourThemes.actOne, [0, fourThemes.actTwo.length].concat(fourThemes.actTwo));
+            console.log(fourThemes.actOne);
+        }
+
+        //getting points
+        var point = 0;
+
+        function addOnepoint() {
+            if (buttonOne) {
+                point++;
+                return (document.getElementById("points").innerHTML.point + " points");
+            }
+        }
+
+        let buttonOne = document.getElementById("myBu1")
+        buttonOne.addEventListener('click', changeToNextwords, addOnepoint)
+
+        let buttonTwo = document.getElementById("myBu2")
+        buttonTwo.addEventListener('click', changeToNextwords)
+
+        var fourThemes = {
+            actOne: ["Tail", "Shaving", "Flying a drone", "daydreaming", "dancing", "giving a CPR"],
+            actTwo: ["piking a lock", "making coffee", "sauteing food", "rowing a boat", "climbing a rope",
+                "puting on lotion"
+            ],
+            actThree: ["wine tasting", "nightmare", "3D", "working on cars", "scootering", "eating a pepsicle"],
+            actFour: ["ping pong", "writing a check", "bicycling", "hocking", "rolling dice", "water skiing"]
+        };
+
+
+
+
+        //set 1st camera on
+        // let video = document.getElementById('myVideo');
+
+        // navigator.webkitGetUserMedia({
+        //         video: true,
+        //     },
+        //     function (localMediaStream) { // Success
+        //         stream = localMediaStream;
+        //         video.src = window.webkitURL.createObjectURL(stream);
+        //     },
+        //     function (err) { // Failure
+        //         alert('getUserMedia failed: Code ' + err.code);
+        //     }
+        // );
+
+        //-----------------------for 1st users who get words and is going to pretend ------------------
+        //get words or short sentences database from thrid party
+
+        //put words database on 4 themes seperately
+
+        // detecting single face or multi faces in front of two screens simultaneously 
+
+        //counting down 5 seconds 
+
+        // start game
+
+        //counting down 180 seconds
+
+        // system select one theme of words database (two sides' command of theme will be synchronized automatically )
+
+        //system pick certain words randomly for 1st users
+
+        //the words shows on boxs, showing on screen
+
+        //1st start to pretending, counting down 180 seconds
+
+        //--------------------- a trigger that verify 2nd users' answer--------------------------
+        //(the answer that 2nd users said out would shows on 1st users' Result Bar and 2nd users' Result Bar simultaneously)
+        //token
+        //Stem
+        //combine
+        //Featurize
+        //Train
+        //Classify
+
+        //system compare the answers in Result Bar with the words showing on 1st users' screen
+
+        // highlight the words box on 1st users' boxes that is same or similar to the words from the Result Bar.
+
+        //if 2nd users give right answer that at least highlight on box, 1st users can clap hands twice to show "correct", and get new words for 1st users to pretending
+        //else if 2nd users say all words correct that highlight all boxes, system shows "correct" automatically and get a new words for 1st users to pretending, 
+        //else if 2nd users clap hands twice, shows "pass", system get a new word for 1st users to pretending, 
+
+
+
+
+        //set 2nd camera on
+
+        //-----------------------for 2nd users who is going to take a guess ------------------
+        //get words or short sentences database from thrid party
+
+        //put words database on 4 themes seperately
+
+        // detecting single face or multi faces in front of two screens simultaneously 
+
+        //counting down 5 seconds 
+
+        // start game
+
+        //counting down 180 seconds
+
+        //system pick certain first words randomly for 1st users, but hidden for 2nd users
+
+        //speaking, input answer that 2nd users are saying into 1st users' Result Bar and 2nd users' Result Bar simultaneously
+        //token
+        //Stem
+        //combine
+        //Featurize
+        //Train
+        //Classify
+
+        //system compare the answers in Result Bar with the words showing on 1st users' screen
+
+
+        //if the the words that 2nd users are saying is correct or similar, then pop up the words
+
+        //if 1st users clap hands twice, then to show "correct" and the correct words on 2nd users' screen, 
+        //else if 2nd users clap hands twice, then to show "pass" on 1st and 2nd user's screens
+        //else if 2nd users say all words correct , system shows "correct" and the correct words automatically and get a new words for 1st users to pretending, 
+
+
+
+
+
+        //--------------- ending process for both two users--------------------
+        //if shows "wrong", "pass", put current words in "wrong" category
+        //else if shows "correct", put current words in "correct" category.
+
+        // after 60 seconds, game over. 
+        //shows score and "correct" & "wrong" words
+    </script>
+
+</body>
+
+</html>
