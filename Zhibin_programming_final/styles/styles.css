@@ -1,0 +1,158 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+}
+
+
+.whole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.timeAndScore {
+    width: 800px;
+    height: 110px;
+}
+
+#timer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#points {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    color: goldenrod;
+}
+
+.forActing {
+    width: 810px;
+    height: 400px;
+    border: solid 3px;
+    border-radius: 5px;
+    background: black;
+}
+
+#myVideo {
+    width: 800px;
+    height: 400px;
+
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.bigbox {
+    height: 400px;
+    width: 810px;
+    border: solid 3px;
+    border-radius: 5px;
+}
+
+.dataBarForPretending {
+    height: 100px;
+    width: 800px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #00c3ff;
+    border-radius: 10px;
+}
+
+.dataBarforGuessing {
+    height: 100px;
+    width: 800px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: solid 3px #00c3ff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.output {
+    color: grey;
+    font-size: 40px;
+    height: 50px;
+    width: 800px;
+    border: solid #0977af;
+    border-width: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* .button li {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 5px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+} */
+
+.bu1 {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 5px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2be293;
+
+}
+
+.bu2 {
+    background-color: #f96262;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 5px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#newWords {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding-top: 50px;
+}

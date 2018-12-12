@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pretending side</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="whole">
+
+            <div class="timeAndScore">
+                <div id="timer"></div>
+                <div id="points"></div>
+            </div>
+
+            <div class="forActing">
+                <video id="myVideo" preload autoplay loop muted></video>
+            </div>
+
+            <div class="bigbox">
+                <!-- set a Words Bar for words pop up randomly -->
+                <p id="newWords" class="dataBarForPretending"><input type="button" name="words" value="" /></p>
+                <!-- set a Result Bar for the result that user said out  -->
+                <p class="output"><em>...messages comes from guessing</em></p>
+                <!-- <input class="guessBar" type="button" name="results" /> -->
+
+                <!-- two buttons -->
+                <ul class="button">
+                    <li><button class="bu1" id="myBu1">correct</button></li>
+                    <li><button class="bu2" id="myBu2">pass</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
